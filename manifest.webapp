@@ -1,0 +1,37 @@
+{
+  "version": "0.0.1",
+  "name": "Cozy-Template-Marionette",
+  "slug": "app",
+  "icon": "/assets/img/icon.svg",
+  "description": "A cozy app template using Marionette JS framework.",
+  "category": "",
+  "source": "",
+  "developer": {
+    "name": "Fing",
+    "url": "http://mesinfos.fing.org"
+  },
+  "default_locale": "fr",
+  "locales": {
+    "fr": {
+      "description": ""
+    }
+  },
+  "routes": {
+    "/": {
+      "folder": "/",
+      "index": "index.html",
+      "public": false
+    }
+  },
+  "licence": "AGPL-3.0",
+    "apps": {
+      "description": "Required by the cozy-bar to display the icons of the apps",
+      "type": "io.cozy.apps",
+      "verbs": ["GET"]
+    },
+    "bills": {
+      "description": "Required by the cozy-bar to display the icons of the apps",
+      "type": "io.cozy.bills"
+    }
+  }
+}

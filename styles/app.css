@@ -1,0 +1,145 @@
+/* General */
+@import url("./vendors/bootstrap/css/bootstrap.min.css");
+@import url("./vendors/bootstrap/css/bootstrap-theme.min.css");
+
+@import url("./vendors/fontawesome/css/font-awesome.css");
+@import url("./vendors/weloveiconfonts/iconicstroke.css");
+
+* {
+  box-sizing: border-box;
+}
+/* iconicstroke */
+[class*="iconicstroke-"]:before {
+  font-family: 'IconicStroke', sans-serif;
+}
+
+/* avoid problems with cozy-bar */
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Cozy bar fixes */
+#coz-bar {
+  font-size: 16px;
+}
+
+
+[role=application] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+  border-top: 55px solid white;
+  font-family: Lato, sans-serif;
+}
+
+/*
+  typical cozy left bar
+*/
+aside {
+  background: #EEE;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+  padding: 16px;
+}
+
+aside .selected {
+  font-weight: 700;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside li {
+  cursor: pointer;
+}
+
+aside .btn {
+  border-radius: 100%;
+}
+
+
+/*aside li:hover {
+  background: #CCC;
+}*/
+
+
+/* END left bar */
+
+main {
+  height: 100%;
+}
+
+/* Responsive */
+
+@media(min-width: 993px) {
+  aside {
+    width: 220px;
+    height: 100%;
+    float: left;
+  }
+
+  aside button.bottombar {
+    display: none;
+  }
+
+  aside .category {
+    line-height: 48px;
+  }
+
+  aside ul {
+    padding-left: 16px;
+  }
+
+  aside li {
+    line-height: 30px;
+  }
+}
+
+@media(max-width: 992px) {
+  main {
+    border-bottom: 48px solid white;
+  }
+
+  main > div {
+      padding: 30px 0;
+  }
+
+  aside {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 48px;
+    padding: 8px;
+  }
+
+  aside .category {
+    display: none;
+  }
+
+  aside ul {
+    padding-left: 0;
+  }
+
+  aside li {
+    display: inline-block;
+    line-height: 32px;
+    padding: 0 8px;
+  }
+
+  aside button.bottombar {
+      display: block;
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+  }
+}
+
+@media(max-width: 768px) {
+  [role="application"] {
+    border-top: 48px solid white;
+  }
+}
